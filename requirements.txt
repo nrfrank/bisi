@@ -1,0 +1,6 @@
+PyYAML
+click
+GitPython
+docker
+botocore
+boto3
