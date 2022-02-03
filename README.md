@@ -79,7 +79,7 @@ Check out the sections below for more detailed usage.
 With [AWS Batch](https://aws.amazon.com/batch/) you can run your batch workloads in the cloud at any scale and bisi makes that easy for you.
 To get started follow the [AWS Batch Setup Guide](docs/aws_batch_setup.md) to stand up a minimal Batch infrastructure setup running on CPU instances.
 
-Once you have a batch job queue you can configure bisi to utilize your batch infrastructure to run jobs. 
+Once you have a batch job queue, you can configure bisi to utilize your batch infrastructure to run jobs. 
 Assuming you ran the quickstart guide you can run the following to update your `bisi_resources.py` file.
 
 ```bash
@@ -92,7 +92,7 @@ bsr.Job(name="numpy_example", entrypoint="workload.py", dockerfile=df,
         batch_config=BatchJobConfig(jobQueue="bisi-test-jq"))' > bisi_resources.py
 ```
 
-This configures bisi to upload your docker image to [Amazon ECR](https://aws.amazon.com/ecr/) and where to submit your batch job to.
+This configures bisi to upload your docker image to [Amazon ECR](https://aws.amazon.com/ecr/) and tells bisi where to submit your batch job.
 Next you can deploy your container and run it in batch.
 
 ```bash
