@@ -16,6 +16,7 @@ setuptools.setup(
     version='0.0.1',
     description='A Python based runner for docker images.',
     long_description=README,
+    long_description_content_type='text/markdown',
     python_requires='>=3.6.0',
     packages=setuptools.find_packages(where="src", include='bisi.*'),
     package_dir={'': 'src'},
