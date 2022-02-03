@@ -1,5 +1,7 @@
 import setuptools
 
+with open('src/bisi/__version__.py', 'r') as version_file:
+    exec(version_file.read())
 
 with open('requirements.txt') as f:
     requirements = f.read().splitlines()
@@ -13,7 +15,7 @@ with open('README.md') as f:
 
 setuptools.setup(
     name='bisi',
-    version='0.0.1',
+    version=globals()['__version__'],
     description='A Python based runner for docker images.',
     long_description=README,
     long_description_content_type='text/markdown',
