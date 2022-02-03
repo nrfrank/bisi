@@ -19,6 +19,8 @@ $scripts_dir/test.sh
 echo "Bumping version: type=$version_upgrade"
 bumpversion $version_upgrade
 
+rm -rf $project_dir/build/* $project_dir/dist/* $project_dir/src/bisi.egg-info
+
 python -m build --wheel --sdist
 twine upload dist/*
 
