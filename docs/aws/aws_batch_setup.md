@@ -13,25 +13,25 @@ AWS Managed Policies
 - AWSCloudFormationFullAccess
 - AmazonElasticContainerRegistryPublicFullAccess
 
-Extra inline policy:
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": "ecr:*",
-            "Resource": "*"
-        },
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": "iam:PassRole",
-            "Resource": "*"
-        }
-    ]
-}
-```
+- Extra inline policy:
+    ```json
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": "ecr:*",
+                "Resource": "*"
+            },
+            {
+                "Sid": "VisualEditor0",
+                "Effect": "Allow",
+                "Action": "iam:PassRole",
+                "Resource": "*"
+            }
+        ]
+    }
+    ```
 
 # Cloudformation Stack
 
