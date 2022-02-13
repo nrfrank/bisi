@@ -84,6 +84,7 @@ Resources:
 
 aws cloudformation create-stack --stack-name bisi-batch-minimal \
     --template-body "$(cat ./aws_batch_stack.yaml)" \
-    --parameters ParameterKey=Subnets,ParameterValue="$SUBNETS" \
+    --parameters \
+    ParameterKey=Subnets,ParameterValue="$SUBNETS" \
     ParameterKey=SecurityGroups,ParameterValue="$SECURITYGROUPS"
 ```
