@@ -49,7 +49,7 @@ class TestLocalProvider:
              ],
              "foo",
              ["no args"],
-             call(remove=True, image='bisi:latest', environment={}, command=['my/script', 'no args'], stream=True)
+             call(image='bisi:latest', environment={}, command=['my/script', 'no args'], detach=True)
             ),
             ([
                 Dockerfile(name='docker1', file='fake_dockerfile_one'),
@@ -59,7 +59,7 @@ class TestLocalProvider:
              ],
              "multi",
              ["one", "two", "three"],
-             call(remove=True, image='docker1:latest', environment={}, command=['my/script', 'one', 'two', 'three'], stream=True)
+             call(image='docker1:latest', environment={}, command=['my/script', 'one', 'two', 'three'], detach=True)
             )
         ]
     )
