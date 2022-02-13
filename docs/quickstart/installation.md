@@ -1,14 +1,15 @@
 # Installation
 
 ## Prerequisites 
-[Docker](https://docs.docker.com/get-docker/) is required to use bisi
 
-Awscli and AWS credentials are required to use the AWS Batch features.
+* [Docker](https://docs.docker.com/get-docker/) is required to use bisi.
 
-```bash
-pip install awscli
-aws configure
-```
+* Awscli and AWS credentials are required to use the AWS Batch features.
+
+    ```bash
+    pip install awscli
+    aws configure
+    ```
 
 ## Install bisi
 
