@@ -1,1 +1,1 @@
-Read our docs [here](some link)
+Read our documentation [here](some link)
