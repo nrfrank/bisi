@@ -102,3 +102,8 @@ bisi run --provider aws numpy_example
 
 At this point you can navigate to https://console.aws.amazon.com/batch/home to see your pending job. 
 From there you can also navigate to the job to see the logs for the job.
+
+# Contact
+
+* Open an issue at https://github.com/nrfrank/bisi 
+* Contact bisi1.user@gmail.com about any questions/reports.
