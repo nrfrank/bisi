@@ -87,12 +87,15 @@ class Local(Provider):
                 image=job.dockerfile.latest_image_tag(),
                 command=command,
                 environment=environment,
-                remove=job.local_config.remove,
-                stream=True,
+                detach=True,
                 **job.local_config.kwargs
             )
-            for log in container:
+            for log in container.logs(stream=True, stdout=True, stderr=True):
                 print(log.decode('utf-8').strip('\n'))
+
+            if job.local_config.remove:
+                container.remove()
+
         except Exception as e:
             print('Job Failed', file=sys.stderr)
             raise e
