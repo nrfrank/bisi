@@ -5,7 +5,7 @@ import yaml
 from pathlib import Path
 from typing import Union
 
-from bisi.resources import Dockerfile
+from bisi.resources import Resource
 
 
 def create_python_resources(path: Union[str, Path]) -> None:
@@ -29,7 +29,7 @@ def create_resources(project_root_dir: Union[str, Path]) -> None:
     Args:
         project_root_dir: The path to the root directory to get the resource definitions from
     """
-    # TODO: Figure out how to collate these two sources if both exist.
+    Resource.clear_resources()
     project_root_dir = Path(project_root_dir)
 
     python_path = os.path.join(project_root_dir, 'bisi_resources.py')

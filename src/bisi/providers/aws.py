@@ -134,7 +134,7 @@ class Aws(Provider, CloudMixin):
 
         print(f'Running {job}')
 
-        command = [job.entrypoint] + list(arguments)
+        command = [job.entrypoint] + list(arguments) + job.batch_config.extra_args
         if job.entrypoint.endswith('.py'):
             command = ['python'] + command
 
