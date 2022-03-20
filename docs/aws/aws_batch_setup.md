@@ -13,25 +13,25 @@ AWS Managed Policies
 - AWSCloudFormationFullAccess
 - AmazonElasticContainerRegistryPublicFullAccess
 
-Extra inline policy:
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": "ecr:*",
-            "Resource": "*"
-        },
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": "iam:PassRole",
-            "Resource": "*"
-        }
-    ]
-}
-```
+- Extra inline policy:
+    ```json
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": "ecr:*",
+                "Resource": "*"
+            },
+            {
+                "Sid": "VisualEditor0",
+                "Effect": "Allow",
+                "Action": "iam:PassRole",
+                "Resource": "*"
+            }
+        ]
+    }
+    ```
 
 # Cloudformation Stack
 
@@ -84,6 +84,7 @@ Resources:
 
 aws cloudformation create-stack --stack-name bisi-batch-minimal \
     --template-body "$(cat ./aws_batch_stack.yaml)" \
-    --parameters ParameterKey=Subnets,ParameterValue="$SUBNETS" \
+    --parameters \
+    ParameterKey=Subnets,ParameterValue="$SUBNETS" \
     ParameterKey=SecurityGroups,ParameterValue="$SECURITYGROUPS"
 ```
